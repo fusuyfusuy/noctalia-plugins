@@ -27,7 +27,7 @@ Rectangle {
     property string section: ""
     property real baseSize: Style.capsuleHeight
     property bool applyUiScale: false
-    property string tooltipText: dockerAvailable ? (pluginApi ? pluginApi.tr("running_containers").arg(runningCount) : "Containers: " + runningCount) : "Docker not available"
+    property string tooltipText: dockerAvailable ? (pluginApi ? pluginApi.tr("tooltip.running_containers").arg(runningCount) : "Containers: " + runningCount) : (pluginApi ? pluginApi.tr("tooltip.docker_not_available") : "Docker not available")
     property string tooltipDirection: BarService.getTooltipDirection()
     property string density: Settings.data.bar.density
     property bool enabled: true

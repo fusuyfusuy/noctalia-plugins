@@ -1,0 +1,28 @@
+{
+  "tooltip": {
+    "running_containers": "Çalışan konteynerler: %1",
+    "docker_not_available": "Docker mevcut değil"
+  },
+  "ui": {
+    "containers": "Konteynerler",
+    "volumes": "Birimler",
+    "refresh": "Yenile",
+    "prune": "Temizle",
+    "stop": "Durdur",
+    "start": "Başlat",
+    "remove": "Kaldır"
+  },
+  "settings": {
+    "title": "Konteyner Yöneticisi Ayarları",
+    "general": "Genel",
+    "refresh_interval_label": "Yenileme Aralığı",
+    "refresh_interval_description": "Eklenti konteyner durumunu ne sıklıkta kontrol eder",
+    "current_value": "Seçildi: {value} ms"
+  },
+  "intervals": {
+    "1_second": "1 saniye",
+    "5_seconds": "5 saniye",
+    "10_seconds": "10 saniye",
+    "30_seconds": "30 saniye"
+  }
+}

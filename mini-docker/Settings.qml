@@ -54,8 +54,8 @@ ColumnLayout {
         spacing: Style.marginS
 
         NLabel {
-            label: (pluginApi && pluginApi.tr) ? pluginApi.tr("refreshinterval_label") : "Refresh Interval"
-            description: (pluginApi && pluginApi.tr) ? pluginApi.tr("refreshinterval_description") : "How often the plugin checks for container status changes"
+            label: (pluginApi && pluginApi.tr) ? pluginApi.tr("settings.refresh_interval_label") : "Refresh Interval"
+            description: (pluginApi && pluginApi.tr) ? pluginApi.tr("settings.refresh_interval_description") : "How often the plugin checks for container status changes"
         }
 
         NComboBox {
@@ -68,7 +68,7 @@ ColumnLayout {
         }
 
         Text {
-            text: ((pluginApi && pluginApi.tr) ? pluginApi.tr("currentvalue") : "Selected: {value} ms").replace("{value}", root.valueRefreshInterval)
+            text: ((pluginApi && pluginApi.tr) ? pluginApi.tr("settings.current_value") : "Selected: {value} ms").replace("{value}", root.valueRefreshInterval)
             color: Color.mOnSurfaceVariant
             font.pointSize: Style.fontSizeS
         }

@@ -1,0 +1,28 @@
+{
+  "tooltip": {
+    "running_containers": "Contêineres em execução: %1",
+    "docker_not_available": "Docker não disponível"
+  },
+  "ui": {
+    "containers": "Contêineres",
+    "volumes": "Volumes",
+    "refresh": "Atualizar",
+    "prune": "Limpar",
+    "stop": "Parar",
+    "start": "Iniciar",
+    "remove": "Remover"
+  },
+  "settings": {
+    "title": "Configurações do Gerenciador de Contêineres",
+    "general": "Geral",
+    "refresh_interval_label": "Intervalo de atualização",
+    "refresh_interval_description": "Com que frequência o plugin verifica o status dos contêineres",
+    "current_value": "Selecionado: {value} ms"
+  },
+  "intervals": {
+    "1_second": "1 segundo",
+    "5_seconds": "5 segundos",
+    "10_seconds": "10 segundos",
+    "30_seconds": "30 segundos"
+  }
+}
