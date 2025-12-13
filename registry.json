@@ -46,6 +46,17 @@
       "lastUpdated": "2025-12-13T18:44:49+05:30"
     },
     {
+      "id": "network-indicator",
+      "name": "NetworkIndicator",
+      "version": "1.0.0",
+      "author": "tonigineer",
+      "description": "A `lively` network traffic indicator.",
+      "repository": "https://github.com/tonigineer/noctalia-plugins",
+      "minNoctaliaVersion": "3.6.2",
+      "license": "MIT",
+      "lastUpdated": "2025-12-12T20:44:42+01:00"
+    },
+    {
       "id": "privacy-indicator",
       "name": "Privacy Indicator",
       "version": "1.0.8",
