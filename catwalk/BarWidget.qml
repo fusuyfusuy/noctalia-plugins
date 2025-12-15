@@ -6,7 +6,6 @@ import qs.Modules.Bar.Extras
 import qs.Services.UI
 import qs.Widgets
 import qs.Services.System
-import org.kde.kirigami.primitives as Kirigami
 
 Rectangle {
     id: root
@@ -110,12 +109,12 @@ Rectangle {
         return actuallyRunning ? (pluginApi.tr("tooltip.running") || "Running") : (pluginApi.tr("tooltip.sleeping") || "Sleeping");
     }
     
-    Kirigami.Icon {
+    Image {
         id: iconImage
         source: root.currentIconSource
         anchors.centerIn: parent
-        anchors.horizontalCenterOffset: -3 // Padding on right
-        anchors.verticalCenterOffset: -1   // Padding on bottom
+        anchors.horizontalCenterOffset: -3
+        anchors.verticalCenterOffset: -1
         
         width: {
             switch (root.density) {
@@ -127,8 +126,17 @@ Rectangle {
         }
         height: width
         
-        isMask: true
-        color: Settings.data.colorSchemes.darkMode ? "white" : "black"
+        // Ensures the SVG renders sharply at any size
+        fillMode: Image.PreserveAspectFit
+        smooth: true
+        mipmap: true 
+
+        // This enables the "mask" behavior to recolor the icon
+        layer.enabled: true
+        layer.effect: MultiEffect {
+            colorization: 1.0
+            colorizationColor: Settings.data.colorSchemes.darkMode ? "white" : "black"
+        }
     }
     
 

@@ -4,7 +4,6 @@ import QtQuick.Layouts
 import qs.Commons
 import qs.Services.System
 import qs.Widgets
-import org.kde.kirigami.primitives as Kirigami
 
 Item {
     id: root
@@ -75,14 +74,24 @@ Item {
                         onTriggered: bigCatItem.idleFrameIndex = (bigCatItem.idleFrameIndex + 1) % bigCatItem.idleIcons.length
                     }
 
-                    Kirigami.Icon {
+                    Image {
                         id: bigCatImage
                         anchors.fill: parent
+                        
                         source: (bigCatItem.isRunning && SystemStatService.cpuUsage >= (root.pluginApi?.pluginSettings?.minimumThreshold || 10)) 
                                 ? Qt.resolvedUrl(bigCatItem.icons[bigCatItem.frameIndex]) 
                                 : Qt.resolvedUrl(bigCatItem.idleIcons[bigCatItem.idleFrameIndex])
-                        isMask: true
-                        color: Settings.data.colorSchemes.darkMode ? "white" : "black"
+                        
+                        fillMode: Image.PreserveAspectFit
+                        smooth: true
+                        mipmap: true
+
+                        // This handles the programmatic coloring
+                        layer.enabled: true
+                        layer.effect: MultiEffect {
+                            colorization: 1.0
+                            colorizationColor: Settings.data.colorSchemes.darkMode ? "white" : "black"
+                        }
                     }
                 }
 
